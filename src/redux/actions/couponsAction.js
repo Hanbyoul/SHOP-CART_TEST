@@ -3,7 +3,8 @@ import { couponActions } from "../reducers/couponsReducer";
 function couponAction() {
   return async (dispatch) => {
     let url =
-      "https://my-json-server.typicode.com/Hanbyoul/hanbyoul-shop/coupons";
+      "https://my-json-server.typicode.com/Hanbyoul/SHOP-CART_TEST/coupons";
+
     let res = await fetch(url);
     let data = await res.json();
     dispatch(couponActions.getCoupons({ data }));
